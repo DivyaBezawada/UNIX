@@ -1,0 +1,12 @@
+now="$(date -u)"                                       #Reads the present date in UTC format
+printf "Current date and time %sin ""$now \n"          # prints the current date
+
+h=$(date +"%H")                                        #Reads the current time in hours
+if [ $h -gt 18 -a $h -le 23 ]                          # Checks the condition ,if the time is greater than 8 PM
+then
+echo YES                                               #Prints "YES"
+elif [ $h -gt 0 -a $h -le 18 ]                         # Checks the condition ,if the time is less than 8 PM
+then
+echo NO                                                #Prints "NO"
+
+fi                                      #The keyword “fi” indicates the end of the inner if statement and all if statement should end with the keyword “fi”.
